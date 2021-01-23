@@ -1,1 +1,8 @@
-asd
+@font-face {
+font-family: ”Wotfard”;
+src: url(‘Chunkfive.eot’);
+src: local(‘ChunkFive’),local(‘ChunkFive’),
+url(‘Chunkfive.woff’) format(‘woff’),
+url(‘Chunkfive.otf’) format(‘opentype’),
+url(‘Chunkfive.svg#ChunkFive’) format(‘svg’);
+}
