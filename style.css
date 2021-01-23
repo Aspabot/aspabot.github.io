@@ -1,8 +1,3 @@
-@font-face {
-font-family: ”Wotfard”;
-src: url(‘fonts/wotfard-bold-webfont.eot’);
-src: local(‘ChunkFive’),local(‘ChunkFive’),
-url(‘Chunkfive.woff’) format(‘woff’),
-url(‘Chunkfive.otf’) format(‘opentype’),
-url(‘Chunkfive.svg#ChunkFive’) format(‘svg’);
+.ejemplo{
+  background-color: red;
 }
