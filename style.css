@@ -2,3 +2,7 @@ body{
 /*  background-color: rgb(234,82,80);*/
 	background-color: coral;
 }
+
+p{
+	color: red;
+}
