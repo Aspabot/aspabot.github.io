@@ -1,8 +1,20 @@
 /*Hoja de estilos*/
+
+:root {
+	--aspa-red: #EA5250;
+	--aspa-black: #201E1E;
+}
+  
 body{
-	background-color: rgb(234,82,80);
+	background-color: var(--aspa-red);
+}
+
+h1{
+	color: white;
+	font-family: "chaneyultra_extended";
 }
 
 p{
+	color: var(--aspa-black);
 	font-family: "wotfardbold";
 }
