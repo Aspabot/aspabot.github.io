@@ -19,3 +19,10 @@ p{
 	color: var(--aspa-black);
 	font-family: "wotfardbold";
 }
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
