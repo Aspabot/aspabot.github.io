@@ -63,22 +63,3 @@ p{
 .aspa_header {
 	margin:auto;
 }
-
-.container_pixel {
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: white;
-	width: 80%;
-	max-width: 800px;
-	margin: 0;
-	padding: 0;
-	padding-top: 0;
-}
-.elemento_pixel {
-	flex-grow: 0;
-	background-color: white;
-	padding-bottom: 0;
-	width:50%;
-}
