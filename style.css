@@ -16,12 +16,21 @@ h1 {
     letter-spacing: 50px;
 }
 
-p a {
+p {
     color: var(--aspa-black);
     font-family: "wotfardbold";
     margin: auto;
     text-align: center;
 }
+
+a {
+    color: var(--aspa-black);
+    font-family: "wotfardbold";
+    margin: auto;
+    text-align: center;
+    style="text-decoration:none"
+}
+
 
 .center {
     display: block;
