@@ -16,7 +16,7 @@ h1 {
     letter-spacing: 50px;
 }
 
-p {
+p a {
     color: var(--aspa-black);
     font-family: "wotfardbold";
     margin: auto;
