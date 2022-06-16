@@ -68,7 +68,7 @@ a {
     flex-grow: 0;
     background-color: white;
     padding-bottom: 20px;
-    width: 1080px;
+    width: 100%;
 }
 
 .elemento_header {
@@ -85,7 +85,7 @@ a {
 }
 
 .pixelpics {
-    max-width: 100%;
+    max-width: 1080px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
