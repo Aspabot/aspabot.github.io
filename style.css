@@ -1,5 +1,3 @@
-/*Hoja de estilos HELLO HELLO hELLOA*/
-
 :root {
     --aspa-red: #EA5250;
     --aspa-black: #201E1E;
@@ -7,6 +5,7 @@
 
 body {
     background-color: var(--aspa-red);
+    background-image: url(images/aspabot_bg.png);
     margin: 0px;
 }
 
