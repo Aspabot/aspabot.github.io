@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: var(--aspa-red);
+    /*background-color: var(--aspa-red);*/
     background-image: url(images/aspabot_bg.png);
     margin: 0px;
 }
