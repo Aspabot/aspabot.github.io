@@ -1,7 +1,17 @@
+:root {
+    --aspa-red: #EA5250;
+    --aspa-black: #201E1E;
+    --aspa-logo: #E43B44;
+    --dark-red: #3E2731;
+}
+
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'wotfardregular', sans-serif;
+    font-size: 18px;
+    background-color: var(--dark-red);
+    color: #fff;
 }
 
 .container {
@@ -11,18 +21,21 @@ body, html {
 
 .sidebar {
     width: 200px;
-    background-color: #333;
+    background-color: var(--aspa-logo);
     color: #fff;
     padding: 20px;
     box-sizing: border-box; /* Incluye padding en el ancho y alto */
     min-height: 100vh;
     position: fixed;
+    display: flex;
+    flex-direction: column; 
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-family: "wotfardmedium";
 }
 
 .sidebar a {
@@ -33,7 +46,8 @@ body, html {
 }
 
 .sidebar a:hover {
-    background-color: #555;
+    font-family: "wotfardbold";
+    font-size: 20px;
 }
 
 .sidebar img {
@@ -42,7 +56,7 @@ body, html {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 20px 0px;
 }
 
 .content {
@@ -59,4 +73,11 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.bottom-links {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    max-width: calc(100% - 40px);
 }
