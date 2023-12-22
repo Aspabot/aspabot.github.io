@@ -16,8 +16,9 @@
 			<!-- Sidebar -->
 			<aside class="sidebar">
 				<a href="https://aspabot.com/"><img src="images/aspabot_logo.png" alt="aspabot_logo"></a>
+				<img src="images/logo_name.svg" alt="Aspa name logo" width="160">
 				<ul>
-					<li><a href="#seccion1">Sección 1</a></li>
+					<li><a href="#seccion0">Sección 1</a></li>
 					<li><a href="#seccion2">Sección 2</a></li>
 					<li><a href="#seccion3">Sección 3</a></li>
 					<!-- Agrega más enlaces según sea necesario -->
@@ -32,7 +33,7 @@
 			</aside>
 	
 			<!-- Contenido principal -->
-			<main class="content">
+			<main class="content" id="seccion0">
 				<!-- Sección 1 -->
 				<section class="full-height" id="seccion1">
 					<h2>Sección 1</h2>
@@ -42,7 +43,18 @@
 				<!-- Sección 2 -->
 				<section class="full-height" id="seccion2">
 					<h2>Sección 2</h2>
-					<p>Contenido de la Sección 2...</p>
+
+					<div class="controls">
+						<div class="image-section">
+							<img src="images/pixel_01.png" alt="Imagen 1">
+							<img src="images/pixel_02.png" alt="Imagen 2">
+							<img src="images/pixel_03.png" alt="Imagen 3">
+							<!-- Añade más imágenes según sea necesario -->
+						</div>
+						<div class="control-button" id="prevButton">&lt;</div>
+						<div class="control-button" id="nextButton">&gt;</div>
+					</div>
+
 				</section>
 	
 				<!-- Sección 3 -->
@@ -53,5 +65,6 @@
 				<!-- Agrega más secciones según sea necesario -->
 			</main>
 		</div>
+		<script src="script.js"></script> 
 	</body>
 </html>
