@@ -26,6 +26,21 @@ document.addEventListener('mousemove', (e) => {
   }
 });
 
+// JavaScript
+document.addEventListener('mousedown', () => {
+  document.body.classList.add('clicking');
+  document.querySelectorAll('a, .control-button').forEach(element => {
+      element.classList.add('clicking');
+  });
+});
+
+document.addEventListener('mouseup', () => {
+  document.body.classList.remove('clicking');
+  document.querySelectorAll('a, .control-button').forEach(element => {
+      element.classList.remove('clicking');
+  });
+});
+
 let currentImageIndex = 0;
 const images = document.querySelectorAll('.image-section img');
 const prevButton = document.getElementById('prevButton');
@@ -39,34 +54,57 @@ showImage(currentImageIndex);
 prevButton.addEventListener('click', showPrevImage);
 nextButton.addEventListener('click', showNextImage);
 
+// Cambiar la imagen de los botones al hacer click
+prevButton.addEventListener('mousedown', () => {
+  prevButton.style.backgroundImage = "url('images/arrow_prev_pushed.png')";
+});
+prevButton.addEventListener('mouseup', () => {
+  prevButton.style.backgroundImage = "url('images/arrow_prev.png')";
+});
+prevButton.addEventListener('mouseout', () => {
+  prevButton.style.backgroundImage = "url('images/arrow_prev.png')";
+});
+
+nextButton.addEventListener('mousedown', () => {
+  nextButton.style.backgroundImage = "url('images/arrow_next_pushed.png')";
+});
+nextButton.addEventListener('mouseup', () => {
+  nextButton.style.backgroundImage = "url('images/arrow_next.png')";
+});
+nextButton.addEventListener('mouseout', () => {
+  nextButton.style.backgroundImage = "url('images/arrow_next.png')";
+});
+
 // Mostrar la imagen anterior
 function showPrevImage() {
-    if (currentImageIndex > 0) {
-        currentImageIndex--;
-        showImage(currentImageIndex);
-    }
+  if (currentImageIndex > 0) {
+    currentImageIndex--;
+  } else {
+    currentImageIndex = images.length - 1;
+  }
+  showImage(currentImageIndex);
 }
 
 // Mostrar la siguiente imagen
 function showNextImage() {
-    if (currentImageIndex < images.length - 1) {
-        currentImageIndex++;
-        showImage(currentImageIndex);
-    }
+  if (currentImageIndex < images.length - 1) {
+    currentImageIndex++;
+  } else {
+    currentImageIndex = 0;
+  }
+  showImage(currentImageIndex);
 }
 
 // Mostrar una imagen específica
 function showImage(index) {
-    images.forEach((img, i) => {
-        if (i === index) {
-            img.style.display = 'block';
-        } else {
-            img.style.display = 'none';
-        }
-    });
+  const imageWidth = images[0].getBoundingClientRect().width;
+  const offset = -index * imageWidth;
+  images.forEach((img) => {
+      img.style.transform = `translateX(${offset}px)`;
+  });
 
-    // Actualizar estado de los botones
-    updateControls();
+  // Actualizar estado de los botones
+  updateControls();
 }
 
 // Actualizar estado de los botones

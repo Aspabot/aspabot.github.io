@@ -5,6 +5,26 @@
     --dark-red: #3E2731;
 }
 
+@font-face {
+    font-family: 'born2bsporty';
+    src: url('fonts/pixelfonts/Born2bSportyV2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'minimal4';
+    src: url('fonts/pixelfonts/Minimal4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tinyunicode';
+    src: url('fonts/pixelfonts/TinyUnicode.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body, html {
     height: 100%;
     margin: 0;
@@ -13,6 +33,19 @@ body, html {
     background-color: var(--dark-red);
     color: #fff;
     scroll-behavior: smooth;
+    cursor: url('images/cursor_hand1.png'), auto;
+}
+
+body.clicking {
+    cursor: url('images/cursor_hand2.png'), auto;
+}
+
+body, a, .control-button {
+    cursor: url('images/cursor_hand1.png'), auto;
+}
+
+body.clicking, .control-button.clicking {
+    cursor: url('images/cursor_hand2.png'), auto;
 }
 
 .container {
@@ -32,12 +65,21 @@ body, html {
     flex-direction: column; 
 }
 
+.main {
+    padding: 20px;
+    margin-left: 200px;
+    box-sizing: border-box;
+    padding: 20px; /* Ajusta el relleno según tus necesidades */
+    width: calc(100% - 200px); /* Resta el ancho del sidebar */
+}
+
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     margin-top: 20px;
-    font-family: "wotfardmedium";
+    font-family: "tinyunicode";
+    font-size: 40px;
 }
 
 .sidebar a {
@@ -45,11 +87,16 @@ body, html {
     color: #fff;
     padding: 5px 10px;
     display: block;
+    cursor: url('images/cursor_hand1.png'), auto;
 }
 
 .sidebar a:hover {
-    font-family: "wotfardbold";
-    font-size: 20px;
+    font-family: "tinyunicode";
+    color: var(--dark-red);
+}
+
+.sidebar a:active {
+    cursor: url('images/cursor_hand2.png'), auto;
 }
 
 .sidebar img {
@@ -67,7 +114,6 @@ body, html {
     padding: 20px;
     margin-left: 200px;
     box-sizing: border-box;
-    padding: 20px; /* Ajusta el relleno según tus necesidades */
     width: calc(100% - 200px); /* Resta el ancho del sidebar */
 }
 
@@ -75,10 +121,16 @@ body, html {
     min-height: 100vh; /* Cada sección ocupa el 100% de la altura de la ventana */
     /*margin-right: -200px;*/
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+}
+
+h1 {
+    font-family: "born2bsporty";
+    font-size: 80px;
+    margin-bottom: 5px;
 }
 
 .bottom-links {
@@ -88,49 +140,94 @@ body, html {
     max-width: calc(100% - 40px);
 }
 
-/* Estilos para el contenedor de imágenes y los controles */
-.image-container {
-    position: relative;
-}
-
-.controls {
-    position: static;
-    top: 50%;
-    transform: translateY(-50%);
+.carousel {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 200px;
-    box-sizing: border-box;
-    z-index: 1;
-}
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    gap: 20px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    position: relative;
 
-.control-button {
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    color: #fff;
-    font-size: 20px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-.control-button.active {
-    opacity: 1;
-    cursor: pointer;
 }
 
 .image-section {
+    width: 100%;
+    height: auto; /* Asegura que el contenedor tenga una altura definida */
+    max-width: 60vw;
+    max-height: 80vh; /* Limita la altura al 80% del tamaño de la ventana */
+    margin: 0px;
+    background-color: var(--aspa-black);
+    /* ... */
     display: flex;
-    flex-direction: column;
     align-items: center;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .image-section img {
-    width: 600px;
+    width: 100%; /* Cambia max-width a width */
+    height: 100%; /* Cambia max-height a height */
+    object-fit: contain;
+    margin: 0px;
+    /* ... */
+    flex: 0 0 auto;
+    transition: transform 1s;
+}
+
+#hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+#hello img {
+    width: 50%; /* Cambia 100% a 50% */
+    height: 50%; /* Cambia 100% a 50% */
+    object-fit: contain;
+    margin: 0px;
+}
+
+.control-button {
+    position: relative;
+    top: 50%;
+    min-width: 15vh;
+    min-height: 15vh;
     height: auto;
-    display: none;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-size: cover;
+    cursor: url('images/cursor_hand1.png'), auto;
+}
+
+#prevButton {
+    background-image: url('images/arrow_prev.png');
+    background-size: cover;
+}
+
+#nextButton {
+    background-image: url('images/arrow_next.png');
+    background-size: cover;
+}
+
+.control-button img {
+    width: 100%; /* Cambia max-width a width */
+    height: 100%; /* Cambia max-height a height */
+    object-fit: contain;
+    margin: 0px;
+    /* ... */
+    flex: 0 0 auto;
+    transition: transform 1s;
 }
