@@ -21,7 +21,22 @@ document.addEventListener('mousemove', (e) => {
 
     window.scrollTo({
       top: newScrollTop,
-      behavior: 'smooth' // Puedes ajustar a 'smooth' si quieres un desplazamiento suavizado
+      behavior: 'smooth'
     });
   }
+});
+
+// JavaScript
+document.addEventListener('mousedown', () => {
+  document.body.classList.add('clicking');
+  document.querySelectorAll('a, .control-button').forEach(element => {
+      element.classList.add('clicking');
+  });
+});
+
+document.addEventListener('mouseup', () => {
+  document.body.classList.remove('clicking');
+  document.querySelectorAll('a, .control-button').forEach(element => {
+      element.classList.remove('clicking');
+  });
 });
