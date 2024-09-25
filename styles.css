@@ -58,7 +58,7 @@ body.clicking, .control-button.clicking {
     color: #fff;
     font-family: 'wotfardmedium', sans-serif;
     font-style: italic;
-    line-height: 1.75;
+    margin-top: 15px;
 }
 
 a {
