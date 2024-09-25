@@ -54,6 +54,12 @@ body.clicking, .control-button.clicking {
     align-items: center;
 }
 
+a {
+    color: #fff;
+    font-family: 'wotfardbold', sans-serif;
+    line-height: 1.75;
+}
+
 h1 {
     font-family: "born2bsporty";
     font-size: 60px;
@@ -67,7 +73,8 @@ h4 {
 }
 
 img {
-    width: 15%;
+    width: 90%;
+    max-width: 400px;
 }
 
 ul {
