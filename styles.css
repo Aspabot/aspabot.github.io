@@ -54,7 +54,20 @@ body.clicking, .control-button.clicking {
     align-items: center;
 }
 
+.mail {
+    color: #fff;
+    font-family: 'wotfardmedium', sans-serif;
+    font-style: italic;
+    line-height: 1.75;
+}
+
 a {
+    color: #fff;
+    font-family: 'wotfardmedium', sans-serif;
+    line-height: 1.75;
+}
+
+a:hover {
     color: #fff;
     font-family: 'wotfardbold', sans-serif;
     line-height: 1.75;
@@ -68,7 +81,7 @@ h1 {
 }
 
 h4 {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     margin-top: 0px;
 }
 
